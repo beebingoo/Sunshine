@@ -49,7 +49,7 @@ public class ForecastFragment extends Fragment {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getGroupId();
+        int id = item.getItemId();
         if (id == R.id.action_refresh) {
             FetchWeatherTask weatherTask = new FetchWeatherTask();
             weatherTask.execute("94043");
@@ -195,7 +195,7 @@ public class ForecastFragment extends Fragment {
             String forecastJsonStr = null;
 
             String format = "JSON";
-            String units = "metirc";
+            String units = "metric";
             int numDays = 7;
 
             try {
